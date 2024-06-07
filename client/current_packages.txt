@@ -1,0 +1,4 @@
+pip-autoremove==0.10.0
+python-dotenv==1.0.1
+setuptools==70.0.0
+wheel==0.43.0

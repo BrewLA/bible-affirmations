@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'NevradaNeue';
+    src: url('/fonts/NevradaNeue-x3oPq.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'NevradaNeue', serif;
+}
+
+@keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .word {
+    display: inline-block;
+    margin-right: 1rem; /* Adjust the margin as needed */
+    animation: fadeInScale 0.6s ease-in-out forwards; /* Use ease-in-out for smoother animation */
+  }
