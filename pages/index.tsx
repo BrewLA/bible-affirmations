@@ -3,6 +3,7 @@ import Modal from "@/components/Modal";
 import Link from "next/link";
 import { useState } from "react";
 import useAnimateWords from "../hooks/useAnimateWords";
+import React from "react";
 
 function Index() {
   const [message, setMessage] = useState("");
@@ -12,7 +13,7 @@ function Index() {
   const [responseMessage, setResponseMessage] = useState("");
   const animatedMessage = useAnimateWords(verse);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError(""); // Clear previous errors
     
