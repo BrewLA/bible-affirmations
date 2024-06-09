@@ -82,7 +82,7 @@ function Index() {
           <h2 className="text-center text-primary text-3xl sm:text-[2rem] sm:leading-tight md:text-[3rem] lg:text-[4rem] leading-tight">
             {animatedMessage.map((word, index) => (
               <span
-                key={index}ç
+                key={index}
                 className="word"
                 style={{ animationDelay: `${index * 0}s` }} /* Adjust delay time */
               >
