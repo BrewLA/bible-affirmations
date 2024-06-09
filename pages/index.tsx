@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import useAnimateWords from "../hooks/useAnimateWords";
 import React from "react";
+import ProductLink from "@/components/ProductLink";
 
 function Index() {
   const [message, setMessage] = useState("");
@@ -81,7 +82,7 @@ function Index() {
           <h2 className="text-center text-primary text-3xl sm:text-[2rem] sm:leading-tight md:text-[3rem] lg:text-[4rem] leading-tight">
             {animatedMessage.map((word, index) => (
               <span
-                key={index}
+                key={index}ç
                 className="word"
                 style={{ animationDelay: `${index * 0}s` }} /* Adjust delay time */
               >
