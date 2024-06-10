@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import useAnimateWords from "../hooks/useAnimateWords";
 import React from "react";
-import ProductLink from "@/components/ProductLink";
 
 function Index() {
   const [message, setMessage] = useState("");
@@ -56,7 +55,7 @@ function Index() {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
-
+  
   return (
     <main className="flex flex-col gap-8 justify-start items-center h-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64">
       <h1 className="text-[6rem] sm:text-[4rem] md:text-[5rem] lg:text-[10rem] xl:text-[15rem] text-secondary text-center relative z-10">Affirmations</h1>
@@ -78,7 +77,7 @@ function Index() {
         </div>
       )}
       {verse && (
-        <div className="max-w-[64rem] h-auto border border-white p-12 rounded-[4rem] relative z-50">
+        <div className="max-w-[64rem] h-auto border border-white p-12 rounded-[3rem] relative z-50 bg-transparent backdrop-blur-lg">
           <h2 className="text-center text-primary text-3xl sm:text-[2rem] sm:leading-tight md:text-[3rem] lg:text-[4rem] leading-tight">
             {animatedMessage.map((word, index) => (
               <span
@@ -100,14 +99,14 @@ function Index() {
           <Link href="#" onClick={handleOpenModal}>FAQs</Link>
         </li>
         <li>|</li>
-        <li>
+        {/* <li>
           <Link href="/about">Join our community!</Link>
-        </li>
-        <li>|</li>
-        <li>
+        </li> */}
+        {/* <li>|</li> */}
+        {/* <li>
           <Link href="/blog/hello-world">View products</Link>
-        </li>
-        <li>|</li>
+        </li> */}
+        {/* <li>|</li> */}
         <li>
           <Link
             href="https://brewla.design"
@@ -119,18 +118,19 @@ function Index() {
       </ul>
       <div className="flex flex-row w-full fixed bottom-0 z-0 pointer-events-none">
         <div className="flex flex-row gap-2 fixed left-[-12rem] bottom-[-2rem] z-0">
-          <LinearCircle />
+          <LinearCircle className="move-up-down move-up-down-delay-1" />
         </div>
         <div className="flex flex-row gap-2 fixed left-[2rem] bottom-[-18rem] z-0">
-          <LinearCircle />
+          <LinearCircle className="move-up-down move-up-down-delay-2" />
         </div>
         <div className="flex flex-row gap-2 fixed right-[-12rem] bottom-[-2rem] rotate-180 z-0">
-          <LinearCircle />
+          <LinearCircle className="move-up-down move-up-down-delay-3" />
         </div>
         <div className="flex flex-row gap-2 fixed right-[2rem] bottom-[-18rem] rotate-180 z-0">
-          <LinearCircle />
+          <LinearCircle className="move-up-down move-up-down-delay-4" />
         </div>
       </div>
+
 
       {isModalOpen && <Modal onClose={handleCloseModal} />}
     </main>
