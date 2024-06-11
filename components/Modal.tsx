@@ -8,8 +8,8 @@ interface ModalProps {
   
 const Modal: React.FC<ModalProps> = ({ onClose }) => {
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-65 z-50">
-            <div className="bg-white w-[25vw] p-6 rounded-3xl flex flex-col">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-65 z-50 overflow-scroll">
+            <div className="bg-white w-[92vw] xl:w-[25vw] p-6 rounded-3xl flex flex-col">
                 <h2 className="text-[4rem] text-black mb-4">FAQs</h2>
                 <div className="container mx-auto">
                     <Accordion title="How does it work?" content="This app is powered by the DistilBERT AI model, which uses sentiment analysis to determine whether your response holds Positive or Negative connotation. From there, it will output a Bible verse as an affirmation!" />
